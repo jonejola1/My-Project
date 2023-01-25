@@ -1,0 +1,23 @@
+
+:root {
+    --color-base: rgba(0, 0, 0);
+    --color-primary: rgba(255, 255, 255);
+    --color-secondary: rgb(204, 204, 204);
+}
+
+.header {
+    overflow: hidden;
+    background-color: var(--color-secondary);
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.header-right {
+    float: right;
+}
+
+.footer {
+    background: var(--color-secondary);
+    color: var(--color-base);
+    line-height: 50px;
+    padding: 0 2rem 0 2rem;
+}
