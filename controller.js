@@ -36,3 +36,30 @@ function clearCache(){
         model.inputs.registerUser.password = ""
         model.inputs.registerUser.confirm_password = ""
 }
+
+function createGamesList() {
+    let listOfApps = document.getElementById('appList')
+
+    for(let i = 0; i < model.data.games.length; i++) {
+        listOfApps.innerHTML += `<ul>Rank: ${model.data.games[i].ranking} ${model.data.games[i].title}</ul> <br>                       
+         `
+    }
+}
+
+function createAppList() {
+    let listOfApps = document.getElementById('appList')
+    let turnary = false
+    let checkIfCreated = false;
+    turnary = !turnary
+
+    checkIfCreated == false ? true : false;
+
+    if(checkIfCreated == false){
+       for(let i = 0; i < model.data.apps.length; i++) {
+            listOfApps.innerHTML = `<a> Rank: ${model.data.games[i].ranking} ${model.data.games[i].title} </a> <br>                      
+             `
+        }
+    } else {
+        listOfApps.innerHTML = '';
+    }
+}

@@ -1,3 +1,4 @@
+
 let model = {
     //app
     app: {
@@ -41,7 +42,8 @@ let model = {
                 email: "Furtastic@admin.no",
             },
         ],
-        apps: [
+
+        games: [
             {
                 title: "Cookie Clicker",
                 cost: "$4.99",
@@ -85,7 +87,50 @@ let model = {
                 `,
             },
         ],
+
+        apps: [
+            {
+                title: "Twitter",
+                cost: "Free",
+                ranking: "1",
+                description: `Join the conversation!
+                    Twitter is the go-to social media app and the 
+                    new media source for what's happending in the world, 
+                    straight from the accounts of the influential people 
+                    who affect your world day-to-day.
+                    `,
+            },
+
+            {
+                title: "TikTok",
+                cost: "Free",
+                ranking: "2",
+                description: `Discover videos from around the world 
+                and create your own with easy-to-use tools to capture your life
+                `,
+            },
+
+            {
+                title: "Disney+",
+                cost: "Free",
+                ranking: "3",
+                description: `Disney+ has something for everyone and every mood, all in one place. 
+                With endless entertainment from Disney, Pixar, Marvel, Star Wars, National Geographic and Star, 
+                there's always something exciting to watch. 
+                Watch the latest realeses, Original series and movies, classic films, 
+                throwbacks and so much more.`,
+            },
+
+            {
+                title: "YouTube",
+                cost: "Free",
+                ranking: "4",
+                description: `Get the officeial YouTube app on iPhoones and iPads. 
+                See what the world is watching -- from the hottest music videos 
+                to whats's popular in gaming, fashion, beauty, news, learning and more. 
+                Subscribe to channels you love, create content of your own, 
+                share with friends, and watch on any device.`,
+            },
+        ],
     },
-
-
 }

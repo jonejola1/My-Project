@@ -1,3 +1,4 @@
+
 function footer() {
     return /*HTML*/ `
         <div class="footer">
