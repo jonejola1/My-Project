@@ -1,5 +1,4 @@
 
-view()
 function view() {
 
         let html = header()
@@ -20,6 +19,9 @@ function view() {
         case 'store':
             html += storeView()
             break
+        case 'cart': 
+            html += cartView()
+            break
         default: 
         html += mainView()
     }
@@ -28,3 +30,4 @@ function view() {
 
     document.getElementById('app').innerHTML = html
 }
+view()

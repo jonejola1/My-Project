@@ -18,7 +18,7 @@ let model = {
             email: "",
             password: "",
             confirm_password: "",
-        }, 
+        },
     },
 
     //data
@@ -27,19 +27,29 @@ let model = {
             {
                 username: "admin",
                 password: "admin",
-                email: "admin@admin.com"
+                email: "admin@admin.com",
+                cart: [],
             },
             
             {
                 username: "Davy10",
                 password: 'Legend',
-                email: "Davy10@admin.net"
+                email: "Davy10@admin.net",
+                cart: [],
             },
             
             {
                 username: "Furtastic",
                 password: "Carrots",
                 email: "Furtastic@admin.no",
+                cart: [],
+            },
+
+            {
+                username: "jonas",
+                password: "jonas",
+                email: "",
+                cart: [],
             },
         ],
 
@@ -132,5 +142,8 @@ let model = {
                 share with friends, and watch on any device.`,
             },
         ],
+
+        addedGames: [],
+        addedApps: [],
     },
 }

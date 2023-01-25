@@ -8,11 +8,11 @@ function userView() {
             </h1>
             <h2>Your information</h2>
             <p>
-                Username: ${model.app.current_user}
-                <br>
-                Password: ${model.data.users[findCorrectUser].password}
-                <br>
-                Email: ${model.data.users[findCorrectUser].email}
+                Username: ${model.app.current_user}<br>
+                Password: ${model.data.users[findCorrectUser].password}<br>
+                Email: ${model.data.users[findCorrectUser].email}<br>
+                <h3>Saved Cart</h3> <br>
+                ${model.data.users[findCorrectUser].cart}
             </p>
         </div>
     `;

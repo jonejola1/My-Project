@@ -4,7 +4,9 @@ function changePage(page) {
     view()
 }
 
+// login Controllers
 function checkLogin() {
+
     if(!model.inputs.login.username) alert('No username detected')
     if(!model.inputs.login.password) alert('No password detected')
     for(let i = 0; i < model.data.users.length; i++) {
@@ -16,6 +18,7 @@ function checkLogin() {
             }
         } 
     }
+    view()
 }
 
 function registerUser() {
@@ -24,8 +27,10 @@ function registerUser() {
         changePage('login')
         clearCache()
     } 
+    view()
 }
 
+// misc controllers
 function clearCache(){
     if(model.inputs.login.username || model.inputs.login.password) {
         model.inputs.login.username = ""
@@ -35,31 +40,54 @@ function clearCache(){
         model.inputs.registerUser.email = ""
         model.inputs.registerUser.password = ""
         model.inputs.registerUser.confirm_password = ""
+        
+        model.data.addedApps = '';
+        model.data.addedGames = '';
 }
 
-function createGamesList() {
-    let listOfApps = document.getElementById('appList')
-
+function createGamesList(status) {
+    //for making the Game list 
     for(let i = 0; i < model.data.games.length; i++) {
-        listOfApps.innerHTML += `<ul>Rank: ${model.data.games[i].ranking} ${model.data.games[i].title}</ul> <br>                       
-         `
+        model.data.addedGames += `<ul>Rank: ${model.data.games[i].ranking} <br> ${model.data.games[i].title} <br> ${model.data.games[i].cost} <button ${model.app.current_user ? `onclick="addToCart(${i}, 'games')"` : 'disabled'}>Buy</button></ul> <br>`
     }
+
+    // for closing the gameslist
+    if(status == 'close') model.data.addedGames = ''; 
+    view()
 }
 
-function createAppList() {
-    let listOfApps = document.getElementById('appList')
-    let turnary = false
-    let checkIfCreated = false;
-    turnary = !turnary
-
-    checkIfCreated == false ? true : false;
-
-    if(checkIfCreated == false){
-       for(let i = 0; i < model.data.apps.length; i++) {
-            listOfApps.innerHTML = `<a> Rank: ${model.data.games[i].ranking} ${model.data.games[i].title} </a> <br>                      
-             `
-        }
-    } else {
-        listOfApps.innerHTML = '';
+function createAppList(status) {
+    //for making the App List
+    for(let i = 0; i < model.data.apps.length; i++) {
+        model.data.addedApps += `<ul> Rank: ${model.data.apps[i].ranking} <br> ${model.data.apps[i].title} <br> ${model.data.apps[i].cost} <button ${model.app.current_user ? `onclick="addToCart(${i}, 'apps')"` : 'disabled'}>Buy</button></ul> <br>`
     }
+    // for closing the applist
+    if(status == 'close') model.data.addedApps = '';
+
+    view()
+}
+
+function addToCart(index, type) {
+    const findCorrectUser = model.data.users.findIndex(i => i.username == model.app.current_user)
+    if(type == 'games'){
+        let itemToAddToCart = {
+            title: `${model.data.addedGames[1].title}`,
+            cost: `${model.data.addedGames[1].cost}`,
+            ranking: `${model.data.addedGames[1].ranking}`,
+            description: `${model.data.addedGames[1].description}`,
+        }
+        model.data.users[findCorrectUser].cart.push( { itemToAddToCart } )
+    };
+
+    if(type == 'apps'){
+        let itemToAddToCart = {
+            title: `${model.data.addedApps[1].title}`,
+            cost: `${model.data.addedApps[1].cost}`,
+            ranking: `${model.data.addedApps[1].ranking}`,
+            description: `${model.data.addedApps[1].description}`,
+        }
+        model.data.users[findCorrectUser].cart.push(itemToAddToCart)
+    };
+
+
 }
