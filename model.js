@@ -135,7 +135,7 @@ let model = {
                 title: "YouTube",
                 cost: "Free",
                 ranking: "4",
-                description: `Get the officeial YouTube app on iPhoones and iPads. 
+                description: `Get the official YouTube app on iPhones and iPads. 
                 See what the world is watching -- from the hottest music videos 
                 to whats's popular in gaming, fashion, beauty, news, learning and more. 
                 Subscribe to channels you love, create content of your own, 
@@ -145,5 +145,7 @@ let model = {
 
         addedGames: [],
         addedApps: [],
+        
+        cartList: '',
     },
 }
