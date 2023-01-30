@@ -10,9 +10,8 @@ function storeView() {
                 <button onclick="createGamesList(model.data.addedGames ? 'close' : '')">${model.data.addedGames ? 'Close Top Games' : 'Top Games'}</button> <br>
                 ${model.data.addedGames}
             </div>
-            
             <div>
-                <button onclick="createAppList(model.data.addedApps ? 'close' : '')">${model.data.addedApps ? 'Close Top Apps' : 'Top Apps'}</button> <br>
+                <button onclick="createAppsList(model.data.addedApps ? 'close' : '')">${model.data.addedApps ? 'Close Top Apps' : 'Top Apps'}</button> <br>
                 ${model.data.addedApps}
             </div>
         </div>

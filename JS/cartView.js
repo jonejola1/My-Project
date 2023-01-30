@@ -1,3 +1,4 @@
+
 function cartView() {
     return /*HTML*/ `
         <div>
@@ -5,9 +6,7 @@ function cartView() {
                 Cart
             </h1>
             <div>
-                <ul>
-                ${userCart}
-                </ul>
+                
             </div>
         </div>
     `;

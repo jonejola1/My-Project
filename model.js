@@ -39,9 +39,9 @@ let model = {
             },
             
             {
-                username: "Furtastic",
-                password: "Carrots",
-                email: "Furtastic@admin.no",
+                username: "AdMan",
+                password: "KingTime",
+                email: "Fantastic@admin.no",
                 cart: [],
             },
 
@@ -133,7 +133,7 @@ let model = {
 
             {
                 title: "YouTube",
-                cost: "Free",
+                cost: "1.99",
                 ranking: "4",
                 description: `Get the official YouTube app on iPhones and iPads. 
                 See what the world is watching -- from the hottest music videos 
@@ -147,5 +147,6 @@ let model = {
         addedApps: [],
         
         cartList: '',
+        userList: '',
     },
 }
