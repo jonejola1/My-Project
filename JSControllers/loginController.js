@@ -1,4 +1,5 @@
 
+//function for checking if the login credentials are correct and corresponding to the users inside the model
 async function checkLogin() {
 
     if (!model.inputs.login.username)
