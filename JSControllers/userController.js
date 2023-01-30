@@ -1,4 +1,4 @@
-
+// function for view cart button in userview
 function listCart(status) {
 
     const userIndex = model.data.users.findIndex( user => { return user.username === model.app.current_user } )
@@ -18,6 +18,7 @@ function listCart(status) {
     view()
 }
 
+// function for Show users button that is only accessible when logged into admin user.
 function createUserList(status) {
     model.data.userList = ''
     for(let i = 0; i < model.data.users.length; i++) {

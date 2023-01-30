@@ -1,4 +1,4 @@
-
+// this view does not display anything.
 function cartView() {
     return /*HTML*/ `
         <div>

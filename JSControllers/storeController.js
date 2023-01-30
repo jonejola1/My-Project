@@ -1,5 +1,6 @@
+
+//function for making the Game list when you click (Top Games)button in storeView 
 function createGamesList(status) {
-    //for making the Game list 
     for(let i = 0; i < model.data.games.length; i++) {
         model.data.addedGames += `
         <ul>
@@ -16,8 +17,10 @@ function createGamesList(status) {
     view()
 }
 
+
+//function for creating the app list when you click (Top Apps)button in storeView
 function createAppsList(status) {
-    //for making the App List
+
     for(let i = 0; i < model.data.apps.length; i++) {
         model.data.addedApps += `
         <ul> 
@@ -33,7 +36,7 @@ function createAppsList(status) {
 
     view()
 }
-
+//function for adding the items created from the functions above in cart
 function addToCart(type, index) {
     const userIndex = model.data.users.findIndex( user => { return user.username === model.app.current_user } )
     return model.data.users[userIndex].cart.push(type === 'app' ? model.data.apps[index] : model.data.games[index]) 
