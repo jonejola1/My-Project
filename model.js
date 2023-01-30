@@ -143,8 +143,8 @@ let model = {
             },
         ],
 
-        addedGames: [],
-        addedApps: [],
+        addedGames: '',
+        addedApps: '',
         
         cartList: '',
         userList: '',
