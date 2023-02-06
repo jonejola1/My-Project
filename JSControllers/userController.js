@@ -23,16 +23,11 @@ function createUserList(status) {
     model.data.userList = ''
     for(let i = 0; i < model.data.users.length; i++) {
         model.data.userList += `
-        <p> 
-            <ul>
-                <li>
-                    Username: ${model.data.users[i].username}<br>
-                    Email: ${model.data.users[i].email == '' ? 'null' : `${model.data.users[i].email}`}<br>
-                    Password: ${model.data.users[i].password}<br>
-                </li>
-            </ul>
-        </p> 
-
+        <li>
+            Username: ${model.data.users[i].username}<br>
+            Email: ${model.data.users[i].email == '' ? 'null' : `${model.data.users[i].email}`}<br>
+            Password: ${model.data.users[i].password}
+        </li> <br>
         ` 
     }
     
@@ -41,3 +36,7 @@ function createUserList(status) {
     view()
 }
 
+function signOut() {
+    if(model.app.current_user) model.app.current_user = ''
+    changePage('login')
+}
