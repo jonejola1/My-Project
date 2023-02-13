@@ -4,8 +4,10 @@ async function checkLogin() {
 
     if (!model.inputs.login.username)
         alert('No username detected');
+        
     if (!model.inputs.login.password)
         alert('No password detected');
+
     for (let i = 0; i < model.data.users.length; i++) {
         if (model.inputs.login.username === model.data.users[i].username) {
             model.app.current_user = model.inputs.login.username;

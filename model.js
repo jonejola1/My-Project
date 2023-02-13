@@ -1,5 +1,5 @@
 
-let model = {
+const model = {
     //app
     app: {
         current_page: "",

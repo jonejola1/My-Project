@@ -14,13 +14,23 @@ function userView() {
                 Password: ${model.data.users[findCorrectUser].password}<br>
                 Email: ${model.data.users[findCorrectUser].email}<br>
             </p>
+            <p>
+                ${model.app.current_user ? '<button onclick="signOut()">Log out</button>' : ''}
+            </p>
+            <p>
                 <h3>Cart</h3> <br>
+            </p>
             <p>
                 <button onclick="listCart('${model.data.cartList ? 'close' : ''}')">${model.data.cartList ? 'Hide cart' : 'View cart'}</button>
                 ${model.data.cartList}
             </p>
-                ${model.app.current_user == 'admin' ? `<div> <button onclick="createUserList('${model.data.userList ? 'close' : ''}')">${model.data.userList ? 'Hide users' : 'Show users'}</button>
-                ${model.data.userList} </div>` : ''}
+            <p>
+                ${model.app.current_user == 'admin' ? `<div> <button onclick="createUserList('${model.data.userList ? 'close' : ''}')">${model.data.userList ? 'Hide users' : 'Show users'}</button>` : ''}
+                <br>
+                <ul>
+                ${model.data.userList}
+                </ul>
+            </p>
         </div>
     `;
 }

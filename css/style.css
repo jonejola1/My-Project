@@ -1,14 +1,43 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+}
 
 :root {
-    --color-base: rgba(0, 0, 0);
-    --color-primary: rgba(255, 255, 255);
-    --color-secondary: rgb(204, 204, 204);
+    --color-base: rgb(0, 0, 0);
+    --color-primary: rgb(216, 216, 216);
+    --color-secondary: rgb(217, 217, 217);
+    --background-color: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
+.body {
+    min-height: 100vh;
 }
 
 .header {
     overflow: hidden;
     background-color: var(--color-secondary);
     padding: 1rem 2rem 1rem 2rem;
+}
+
+.header a {
+    float: left;
+    color: var(--color-base);
+    text-align: center;
+    padding: .8rem;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-base);
+    cursor: pointer;
 }
 
 .header-right {
@@ -19,5 +48,8 @@
     background: var(--color-secondary);
     color: var(--color-base);
     line-height: 50px;
-    padding: 0 2rem 0 2rem;
+}
+
+#app {
+    background-color: var(--background-color);
 }
