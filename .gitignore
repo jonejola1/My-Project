@@ -1,11 +1,8 @@
 ## IDE
-.idea
 .vsc
 
 ## Build
 /node_modules
-.eslintrc.json
-.prettierrc.json
 .eslintrc.js
 yarn.lock
 package.json
